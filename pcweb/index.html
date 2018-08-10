@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+ <meta content="width=device-width,user-scalable=1, maximum-scale=1.0" name="viewport">  
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+  <title>pc版</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			//solution部分的tab切换
+			$("#example").find(".box:first").show();
+			$("#example #left ul").find("li:first").addClass("nav_btn_blue") ;
+			$("#example #left ul li").on("mouseenter",function(){  
+				var index=$(this).index();   
+				$(this).siblings().removeClass("nav_btn_blue").end().addClass("nav_btn_blue");
+				 $(this).parents("#left").nextAll().filter(".box").hide().eq(index).show(); 
+			});
+			//case部分的tab切换
+			$("#case").find(".case_type:first").show();  
+			$("#case #nav_btn ul").find("li:first").addClass("nav_btn_blue") ;
+			$("#nav_btn ul li").on("mouseenter",function(){  
+				var index=$(this).index();   
+				$(this).siblings().removeClass("nav_btn_blue").end().addClass("nav_btn_blue");
+				 $(this).parents("#nav_btn").nextAll().filter(".case_type").hide().eq(index).show(); 
+			});
+
+			//流程图高亮
+			$("#flow div:first").addClass("div_blue").find("div").addClass("div_blue");
+			$("#flow div").on("mousemove",function(){
+				$(this).addClass("div_blue").find("div").addClass("div_blue").end().siblings().removeClass("div_blue").find("div").removeClass("div_blue");
+			});
+		});
+	</script>
+</head>
+<body>
+		<div id="nav">
+			<div>
+				<a href="#">杭州执着梦科技有限公司</a>
+				<ul id="left">
+					<li><a href="#">登录</a></li>
+					| 
+					<li><a href="#">注册</a></li>
+				</ul>
+				<ul id="middle">
+					<li><a href="#">首页</a></li>
+					<li><a href="">服务</a></li>
+					<li><a href="">解决方案</a></li>
+					<li><a href="">经典案例</a></li>
+					<li><a href="">定制流程</a></li>
+					<li><a href="">行业新闻</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>
+				
+			</div>
+		</div>
+		<div id="hidden"></div>
+		<div id="banner">
+			<img src="img/banner.jpg">
+		</div>
+
+		<div id="project"> 
+				<div class="font">
+					<span id="cn">我们的服务项目</span><br>
+					<span id="en">解决几乎所有的软件开发和设计需求</span><br>
+					<img src="img/椭圆1@3x.png">
+				</div>
+				<div id="item_type"> 
+					<img src="img/1-小程序定制.png">
+					<img src="img/1-H5APP定制.png">
+					<img src="img/1-网站建设.png">
+				</div>
+		</div>
+		<div id="tech">
+			<div class="font">
+				<span id="cn">领先的小程序定制技术</span><br>
+				<span id="en">为您打造出属于自己的微信小程序</span><br>
+				<img src="img/椭圆1@3x.png">
+			</div>
+			<div id="icon">
+				<div >
+					<img src="img/2-稳定可靠.png"><br>
+					<span class="top_font">可靠</span> <br> 
+					<span class="middle_font">Reliable</span><br>
+					<span class="bottom_font">
+						执着梦科技为您提供清晰、可视、<br>
+						可持续改进的研发流程服务。
+					</span>
+				</div>
+				<div >
+					<img src="img/2-专业.png"><br>
+					<span class="top_font">专业</span><br>
+					<span class="middle_font"> Profession</span><br>
+					<span class="bottom_font">
+						专业的工程师，确保小程序定制开<br>
+						发服务、产品稳健有序进行。</span>
+				</div>
+				<div >
+					<img src="img/2-高效.png"><br>
+					<span class="top_font">高效 </span><br>
+					<span class="middle_font">Efficient</span><br>
+					<span class="bottom_font">严密的制作标准流程，保证效率。</span>
+				</div>
+				<div >
+					<img src="img/2-安全.png"><br>
+					<span class="top_font">安全</span><br> 
+					<span class="middle_font">Safe</span><br>
+					<span class="bottom_font">
+						对项目有严格标准，多重自检方式<br>
+						结合云计算等，确保项目稳定、安全。
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="service">
+			<div class="font">
+				<span id="cn">专业团队从企业需求出发，为您量身打造</span><br>
+				<span id="en">无需自己动手，低成本开发</span><br>
+				<img src="img/椭圆1拷贝4@3x.png">
+			</div>
+			<div id="service_block">
+				<div class="white_block">
+				<!--	<span class="title">量身定做</span><br>
+					<img src="img/arrow.png"><br>
+					<ul class="item">
+						<li>打破行业的价格垄断提供低价格</li>
+						<li>高品质的高端定制服务</li>
+						<li>贴心每个细节细致解读用户需求</li>
+						<li>采用行业前沿技术，实力保障</li>
+					</ul>   -->
+
+					<img src="img/3-定做.png">
+				</div>
+				<div class="white_block">
+
+					<!--
+					<span class="title">一对一服务</span><br>
+					<img src="img/arrow.png"><br>
+					<ul class="item">
+						<li>详细沟通了解功能需求为</li>
+						<li>每位客户指定专业个性化策划方案</li>
+						<li>确保满足需求高端设计师</li>
+						<li>工程师团队定时定量保障项目进展</li>
+					</ul>  -->
+
+					<img src="img/3-服务.png">
+				</div>
+				<div class="white_block">
+
+					<!--
+					<span class="title">完善售后</span><br>
+					<img src="img/arrow.png"><br>
+					<ul class="item">
+						<li>项目全程跟踪实施</li>
+						<li>上线运营后期bug修复，功能增添</li>
+						<li>数据维护、分析、大数据整合</li>
+						<li>提供服务器、数据库运维等售后服务</li>
+					</ul>   -->
+
+					<img src="img/3-售后.png">
+				</div>
+			</div>
+		</div>
+		<div id="solution">
+			<img src="img/矩形3拷贝@3x.png" id="bg">
+			<div class="font">
+				<span id="cn">从企业需求出发量身打造</span><br>
+				<span id="en">无论您是什么行业，我们都可为您量身打造VIP专属解决方案</span><br>
+				<img src="img/椭圆1拷贝4@3x.png">
+			</div>
+			<div id="example" >
+				<div id="left" >
+					<ul> 
+						<li><a href="#">微商城</a></li>
+						<li><a href="#">微餐饮</a></li>
+						<li><a href="#">微旅游</a></li>
+						<li><a href="#">微美容</a></li>
+						<li><a href="#">微健康</a></li>
+						<li><a href="#">微家装</a></li>
+						<li><a href="#">微学习</a></li>
+						<li><a href="#">微新闻</a></li>
+					</ul> 
+				</div> 
+				<div id="right" class="box">
+					<span id="introduce_title">解决案例介绍</span>
+					<span id="introduce_body">
+						致力于打造线上线下联动的移动门店，电商系统自带数据统计跟踪用户消费轨迹，<br>
+						互动营模块适应消费者场景化体验，助力客户建立O2O生态体系。
+					</span>
+					<div id="icons"> 
+						<div>
+							<img src="img/4-入驻.png"><br> 
+							<span>商家入驻</span>
+						</div>
+						<div>
+							<img src="img/4-装修.png"><br> 
+							<span>店铺装修</span>
+						</div>
+						<div>
+							<img src="img/4-商品.png"><br> 
+							<span>商品管理</span>
+						</div>
+						<div>
+							<img src="img/4-订单.png"><br> 
+							<span>订单管理</span>
+						</div>
+						<div>
+							<img src="img/4-分析.png"><br> 
+							<span>交易分析</span>
+						</div>
+					</div>
+					<div id="btn">咨询定制 > </div>
+				</div>
+				<div class="box">2vnoampcakopcakcamjcpoa</div>
+				<div class="box">3</div>
+				<div class="box">4</div>
+				<div class="box">5</div>
+				<div class="box">6</div>
+				<div class="box">7</div>
+				<div class="box">8</div>
+			</div>
+		</div>
+		<div id="case"> 
+			<div class="font">
+				<span id="cn">客户服务案例</span><br>
+				<span id="en">只要是您的需求，我们都尽心尽力去完成</span><br>
+				<img src="img/椭圆1@3x.png">
+			</div>
+			<div id="nav_btn"> 
+				<ul> 
+					<li >全部</li>
+					<li>营销版</li>
+					<li>电商版</li>
+					<li>资讯版</li>
+				 </ul>
+			</div>
+			<div  class="case_type"> 
+				<img src="img/534143833490491440@3x.png">
+				<img src="img/534143833490491440@3x.png">
+				<img src="img/534143833490491440@3x.png">
+				<img src="img/534143833490491440@3x.png"><br>
+				<button id="more">更多案例</button>
+			</div>
+			<div  class="case_type"> 
+				<img src="img/随便找的图片/1.png">
+				<img src="img/随便找的图片/1.png">
+				<img src="img/随便找的图片/1.png">
+				<img src="img/随便找的图片/1.png">
+				<button id="more">更多案例</button>
+			</div>
+			<div  class="case_type"> 
+				<img src="img/随便找的图片/2.png">
+				<img src="img/随便找的图片/2.png">
+				<img src="img/随便找的图片/2.png">
+				<img src="img/随便找的图片/2.png"><br>
+				<button id="more">更多案例</button>
+			</div>
+			<div  class="case_type"> 
+				<img src="img/随便找的图片/3.png">
+				<img src="img/随便找的图片/3.png">
+				<img src="img/随便找的图片/3.png">
+				<img src="img/随便找的图片/3.png"><br>
+				<button id="more">更多案例</button>
+			</div>
+			<div id="one_stop"> 
+				<div id="left_font"> 
+					<span id="small">
+						如果您已经拥有PC端、移动端、APP等各种形式的<br>
+						客户端或官网</span>
+					<span id="big"> 
+						我们可以一站式将他们迁移到<br>
+						微信小程序上
+					</span>
+				</div>
+				<div id="right_pic"> 
+					<img src="img/6-手机1.png" class="phone">
+
+				</div>
+			</div>
+		</div>
+		<div id="num_picture"> 
+			<img src="img/num_picture.png">
+		</div>
+		<div id="process"> 
+			<div class="font">
+				<span id="cn">微信小程序定制流程</span><br>
+				<span id="en">一站式服务，为您量身打造自己的小程序</span><br>
+				<img src="img/椭圆1@3x.png">
+			</div>
+			<div id="flow">
+				<img src="img/3.jpg">
+				<div  class="under">
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">1</div>
+					<span class="big_font">需求沟通</span><br>
+					<span class="small_font">倾听客户需求<br>了解用户使用<br>环境和流程</span>
+				 </div>
+				<div  class="up">
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">2</div>
+					<span class="big_font">原型设计</span><br>
+					<span class="small_font">按照需求制作<br>交互逻辑模拟<br>原型设计</span>
+				 </div>
+				<div  class="under">
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">3</div>
+					<span class="big_font">UI设计</span><br>
+					<span class="small_font">色彩及平面设元<br>素设定，元素和布局规范确<br>认</span>
+				 </div>
+				<div  class="up">
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">4</div>
+					<span class="big_font">编码设计</span><br>
+					<span class="small_font">后台、前台等<br>等应用数据对接<br>与开发</span>
+				 </div>
+				<div  class="under">
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">5</div>
+					<span class="big_font">测试反馈</span><br>
+					<span class="small_font">用户测试反馈<br>修改调整，规<br>范完善</span>
+				 </div>
+				<div  class="up">
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">6</div>
+					<span class="big_font">发布上线</span><br>
+					<span class="small_font">发布到各大应<br>用市场上</span>
+				 </div>
+				<div class="under"> 
+					<div class="triangle"></div>
+					<div class="hr"></div>
+					<div class="circle">7</div>
+					<span class="big_font">交付验收</span><br>
+					<span class="small_font">客户验收功能<br>及产品，满足<br>定制需求</span>
+				</div>
+			</div>
+		</div>
+		<div id="news">
+			<div class="font">
+				<span id="cn">行业新闻</span><br>
+				<span id="en">最新行业动态，实时发布</span><br>
+				<img src="img/椭圆1@3x.png">
+			</div> 
+			<div id="new">
+				<div id="left_new"> 
+					<img src="img/9-新闻图片.png">
+					<span class="black_font">APP or 小程序 谁是未来互联网流量的收割者</span>
+					<span class="grey_font">
+						小程序，似乎是眼前微信生态圈中最闪亮的那颗星。<br>
+						基于强大的引流优势和便捷运营体验......
+					</span>
+					<button class="blue_btn">了解详情</button>
+				</div>
+				<div id="right_new"> 
+					<ul > 
+						<li> 
+							<div class="float_left"> 
+								<span class="big">02</span><br>
+								<span class="small">2018-08</span>
+							</div>
+							<div class="float_right">
+								<span class="black_font">APP or 小程序 谁是未来互联网流量的收割者</span>
+								<span class="grey_font">
+									小程序，似乎是眼前微信生态圈中最闪亮的那颗星。<br>
+									基于强大的引流优势和便捷运营体验......
+								</span> 
+							</div>
+						</li>
+						<li> 
+							<div class="float_left"> 
+								<span class="big">02</span><br>
+								<span class="small">2018-08</span>
+							</div>
+							<div class="float_right">
+								<span class="black_font">APP or 小程序 谁是未来互联网流量的收割者</span>
+								<span class="grey_font">
+									小程序，似乎是眼前微信生态圈中最闪亮的那颗星。<br>
+									基于强大的引流优势和便捷运营体验......
+								</span> 
+							</div>
+						</li>
+						<li> 
+							<div class="float_left"> 
+								<span class="big">02</span><br>
+								<span class="small">2018-08</span>
+							</div>
+							<div class="float_right">
+								<span class="black_font">APP or 小程序 谁是未来互联网流量的收割者</span>
+								<span class="grey_font">
+									小程序，似乎是眼前微信生态圈中最闪亮的那颗星。<br>
+									基于强大的引流优势和便捷运营体验......
+								</span> 
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="car_picture"> 
+			<img src="img/13.png">
+		</div>
+
+		<div id="connect"> 
+			<div class="font">
+				<span id="cn">联系我们</span><br>
+				<span id="en">想要赶上这次挣钱的商机，那就赶快联系我们</span><br>
+				<img src="img/椭圆1@3x.png">
+			</div>
+
+			<div id="form"> 
+				<form> 
+					<img src="img/邮件.png" id="img1">
+					<img src="img/姓名.png" id="img2">
+					<img src="img/联系方式.png" id="img3">
+					<img src="img/交流.png" id="img4">
+					<label>发送邮件</label><br>
+					<input type="text" id="email"><br>
+					<input type="text" id="people">
+					<input type="text" id="tele_num"><br>
+					<input type="textarea" id="message"><br>
+					<button>发送邮件</button>
+				</form>
+				<ul > 
+					<li>联系方式</li>
+					<li>地址：<br>杭州市余杭区五常街道顾家桥社区联胜路13号4幢301室</li>
+					<li>24小时客服电话：<br>13291866554</li>
+					<li>固定电话：<br>0571-56017045</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="made"> 
+			<img src="img/11-背景.png">
+			<div >
+				<span id="one">小程序撬动移动互联网千亿市场</span>
+				<span id="two">面对红利你岂能无动于衷</span>
+				<button>咨询定制</button>
+			</div>
+		</div>
+
+
+		<div id="footer"> 
+			<div id="all_part"> 
+				<ul > 
+					<li>首页</li>
+					<li>服务</li>
+					<li>解决方案</li>
+					<li>经典案例</li>
+					<li>定制流程</li>
+					<li>行业新闻</li>
+					<li>联系我们</li>
+				</ul>
+				<ul > 
+					<li>联系方式</li>
+					<li>地址：<br>杭州市余杭区五常街道顾家桥社区联胜路13号4幢301室</li>
+					<li>24小时客服电话：<br>13291866554</li>
+					<li>固定电话：<br>0571-56017045</li>
+				</ul>
+				<div id="telephone"> 
+					<img src="img/tele.jpg">
+					<div>
+						<span>全天热线服务</span><br>
+						<span id="num">13291866554</span><br>
+						<button type="button">在线咨询</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+</body>
+</html>
